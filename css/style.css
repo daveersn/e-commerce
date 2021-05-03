@@ -16,6 +16,22 @@ body, html {
     animation: gradient 15s ease infinite;
 }
 
+.card-btn {
+    height: 42px;
+    width: 100%;
+    overflow: hidden;
+}
+.atc-txt{transition: 0.5s;}
+.card-btn:hover .atc-txt{
+    color: white;
+    top: 0;
+}
+.price-txt{transition: 0.5s;}
+.card-btn:hover .price-txt {
+        background-color: #263238;
+        color: #263238;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -29,5 +45,10 @@ body, html {
         background-position: 0% 50%;
     }
 }
-}
 
+
+/*------ MOBILE ------*/
+
+.navbar-mobile {
+    background-color: #232F34;
+}
