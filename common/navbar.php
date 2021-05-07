@@ -1,4 +1,11 @@
 <nav class="navbar z-50 p-4">
+
+    <?php 
+    include "cart.php";
+    include "search.php";
+    ?>
+
+    
     <ul class="navbar-list flex justify-around text-gray-400">
         <li>
             <a href="#" class="block flex flex-col items-center active">
@@ -7,13 +14,13 @@
             </a>
         </li>
         <li>
-            <a href="#" class="block flex flex-col items-center">
+            <a onclick="toggleSec('search')" class="block flex flex-col items-center">
                 <i class="fas fa-search pt-2"></i>
                 <span>Cerca</span>
             </a>
         </li>
         <li>
-            <a href="#" class="block flex flex-col items-center">
+            <a onclick="toggleSec('cart')" class="block flex flex-col items-center">
                 <i class="fas fa-shopping-cart pt-2"></i>
                 <span>Carrello</span>
             </a>
@@ -32,3 +39,18 @@
         </li>
     </ul>
 </nav>
+
+<script type="text/javascript">
+    function toggleSec(sectionId){
+        el = document.getElementById(sectionId);
+        if(el.classList.contains('max-height-menu-0')){
+            el.classList.remove('max-height-menu-0');
+            el.classList.add('max-height-menu-full');
+        }
+        else{
+            el.classList.remove('max-height-menu-full');
+            el.classList.add('max-height-menu-0');
+        }
+        console.log('sectionId: ', sectionId);
+    }
+</script>

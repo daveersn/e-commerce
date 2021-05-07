@@ -3,6 +3,7 @@ body {
     min-height: 100%;
 }
 
+/*NAVBAR*/
 .navbar {
     position: fixed;
     width: 100%;
@@ -11,6 +12,7 @@ body {
     bottom: 0;
     box-shadow:0 0 8px 2px rgba(0,0,0,.15);
     font-size: 15px;
+    border-top: 2px solid rgba(142,153,243, 0.4);
 }
 
 .navbar-list li a{
@@ -18,11 +20,37 @@ body {
 }
 
 .active {
-	color: #ff8f00;
-	font-size: 15px;
+	color: #8e99f3;
+	font-size: 16px;
 	font-weight: 800;
 }
 
+.search-form {
+    border-color: #8e99f3;
+}
+
+/*NAVBAR TOGGLES*/
+.max-height-menu-0 {
+    max-height: 0;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+.max-height-menu-0 div{
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.max-height-menu-full {
+    max-height: 70vh;
+    transition: 2s ease-out;
+}
+
+.max-height-menu-full div {
+    opacity: 1;
+    transition: 0.9s ease;
+}
+
+/*PRODUCT CARDS*/
 .clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -34,15 +62,18 @@ body {
     border-top-left-radius: 0 !important;
 }
 
+
 .prod-card-btn {
-    background-color: #ffc046;
-    background-image: linear-gradient(45deg, #ff8f00 50%, transparent 50%);
+    background-color: #8e99f3;
+    background-image: linear-gradient(45deg, #5c6bc0 50%, transparent 50%);
     background-position: 100%;
     background-size: 400%;
     transition: background 500ms ease-in-out;
+    padding-left: 20px;
 }
 
 .prod-card-btn:hover {
     background-position: 0;
-    /*color: white;*/
+    color: white;
 }
+
