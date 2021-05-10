@@ -1,4 +1,10 @@
 <?php
+
+function create_img_from_url($img_url, $img_name){
+	copy($img_url, 'img/img_'.str_replace(' ', '_', $img_name).'.jpg');
+	return 'img/img_'.str_replace(' ', '_', $img_name).'.jpg';
+}
+
 if (isset($_GET["prod_name"]) &&
 	isset($_GET["prod_desc"]) &&
 	isset($_GET["prod_price"]) &&
@@ -12,21 +18,26 @@ if (isset($_GET["prod_name"]) &&
 			$_GET["prod_price"][$i] != "" &&
 			$_GET["prod_img"][$i] != ""){
 
+			$img = create_img_from_url($_GET["prod_img"][$i], $_GET["prod_name"][$i]);
+
 			$sql_insert_prod = $conn->query("
-				INSERT INTO products ('prod_name', 'prod_desc', 'prod_price', 'prod_img') VALUES ('".$_GET['prod_name'][$i]."', '".$_GET['prod_desc'][$i]."', '".$_GET['prod_price'][$i]."', '".$_GET['prod_img'][$i]."')");
+				INSERT INTO products (prod_name, prod_desc, prod_price, prod_img) VALUES ('".$_GET['prod_name'][$i]."', '".$_GET['prod_desc'][$i]."', '".$_GET['prod_price'][$i]."', '$img')");
 
 			if(!$sql_insert_prod) {
 				echo "Query non riuscita";
 			}
 			else{
-				echo "Prodotti inseriti";
+				echo "Prodotto: ".$_GET['prod_name'][$i]." inserito <br>";
 			}
 
 		}
 		else {
-			echo "Prodotto non inserito: campi vuoti";
+			$j = $i;
+			$j++; 
+			echo "Prodotto n. $j non inserito: campi vuoti <br>";
 		}
 	}
 
 }
 ?>
+
