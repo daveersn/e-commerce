@@ -8,7 +8,7 @@
     
     <ul class="navbar-list flex justify-around text-gray-400">
         <li>
-            <a href="#" class="block flex flex-col items-center active">
+            <a href="/index.php" class="block flex flex-col items-center active">
                 <i class="fas fa-home pt-2"></i>
                 <span>Home</span>
             </a>
@@ -32,7 +32,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="block flex flex-col items-center">
+            <a href="insert_prod.php" class="block flex flex-col items-center">
                 <i class="fas fa-user pt-2"></i>
                 <span>Profilo</span>
             </a>

@@ -21,7 +21,7 @@ if (isset($_GET["prod_name"]) &&
 			$img = create_img_from_url($_GET["prod_img"][$i], $_GET["prod_name"][$i]);
 
 			$sql_insert_prod = $conn->query("
-				INSERT INTO products (prod_name, prod_desc, prod_price, prod_img) VALUES ('".$_GET['prod_name'][$i]."', '".$_GET['prod_desc'][$i]."', '".$_GET['prod_price'][$i]."', '$img')");
+				INSERT INTO products (prod_name, prod_desc, prod_price, prod_img) VALUES ('".$_GET['prod_name'][$i]."', '".str_replace("'","\'",$_GET['prod_desc'][$i])."', '".$_GET['prod_price'][$i]."', '$img')");
 
 			if(!$sql_insert_prod) {
 				echo "Query non riuscita";
