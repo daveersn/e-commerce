@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="font-sans h-full">
+<html lang="en" class="font-sans">
 
 <head>
     <meta charset="utf-8">

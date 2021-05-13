@@ -23,6 +23,7 @@ include 'common/db_conn.php';
                         <div class="p-1">Nome</div>
                         <div class="p-1">Descrizione</div>
                         <div class="p-1">Prezzo</div>
+                        <div class="p-1">Quantitá</div>
                         <div class="p-1">Img</div>
                     </div>
                     <div class="border">
@@ -31,6 +32,7 @@ include 'common/db_conn.php';
                         <input class="border rounded-2xl m-1" type="text" name="prod_name[]">
                         <input class="border rounded-2xl m-1" type="text" name="prod_desc[]">
                         <input class="border rounded-2xl m-1" type="number" name="prod_price[]">
+                        <input class="border rounded-2xl m-1" type="number" name="prod_qta[]">
                         <input class="border rounded-2xl m-1" type="text" name="prod_img[]" oninput="readURL(this, <?php echo $i ?>);">
                         <img id="preview_img_<?php echo $i ?>" src="" class="border rounded-2xl" style="width: 150px;">
                     </div>

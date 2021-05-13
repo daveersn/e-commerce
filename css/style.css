@@ -3,6 +3,18 @@ body {
     min-height: 100%;
 }
 
+html {
+    height: 1px;
+}
+
+.ih-1 {
+    height: 1px
+}
+
+.min-h-85 {
+    min-height: 85%;
+}
+
 /*NAVBAR*/
 .navbar {
     position: fixed;
@@ -29,6 +41,10 @@ body {
     border-color: #8e99f3;
 }
 
+.primary-btn {
+    background-color: #5c6bc0;
+    color: white;
+}
 /*NAVBAR TOGGLES*/
 .max-height-menu-0 {
     max-height: 0;
@@ -56,6 +72,11 @@ body {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+.clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
 
 .no-border-top {
     border-top-right-radius: 0 !important;
@@ -76,4 +97,3 @@ body {
     background-position: 0;
     color: white;
 }
-

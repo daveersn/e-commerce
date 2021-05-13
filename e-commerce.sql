@@ -1,82 +1,97 @@
--- MySQL dump 10.13  Distrib 8.0.16, for osx10.12 (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1    Database: e-commerce
--- ------------------------------------------------------
--- Server version	8.0.23
+-- Host: 127.0.0.1
+-- Creato il: Mag 13, 2021 alle 10:17
+-- Versione del server: 10.4.17-MariaDB
+-- Versione PHP: 8.0.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8mb4 ;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Table structure for table `accounts`
+-- Database: `e-commerce`
 --
 
-DROP TABLE IF EXISTS `accounts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `accounts`
+--
+
 CREATE TABLE `accounts` (
-  `id_account` int NOT NULL AUTO_INCREMENT,
+  `id_account` int(11) NOT NULL,
   `user` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_account`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `accounts`
+-- Struttura della tabella `products`
 --
 
-LOCK TABLES `accounts` WRITE;
-/*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-/*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `products`
---
-
-DROP TABLE IF EXISTS `products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
 CREATE TABLE `products` (
-  `id_product` int NOT NULL AUTO_INCREMENT,
+  `id_product` int(11) NOT NULL,
   `prod_name` varchar(255) DEFAULT NULL,
   `prod_desc` varchar(255) DEFAULT NULL,
   `prod_price` double DEFAULT NULL,
-  `prod_img` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  PRIMARY KEY (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `prod_img` varchar(500) DEFAULT NULL,
+  `prod_qta` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Dump dei dati per la tabella `products`
 --
 
-LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (17,'SHINOBI ICE','La leggenda è tornata , con una punta di ghiaccio! Papaya, fico d\'india e ghiaccio',6,'img/img_SHINOBI_ICE.jpg'),(18,'FIRST LAB N.3','Mirtillo, ribes, fragole di bosco, amarena si uniscono delicatamente in un mix di menta e aromi glaciali per rendere il sapore dolce dei frutti rossi ancora più vivo e fresco! ',6,'img/img_FIRST_LAB_N.3.jpg');
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `products` (`id_product`, `prod_name`, `prod_desc`, `prod_price`, `prod_img`, `prod_qta`) VALUES
+(17, 'SHINOBI ICE', 'La leggenda è tornata , con una punta di ghiaccio! Papaya, fico d\'india e ghiaccio', 6, 'img/img_SHINOBI_ICE.jpg', 100),
+(18, 'FIRST LAB N.3', 'Mirtillo, ribes, fragole di bosco, amarena si uniscono delicatamente in un mix di menta e aromi glaciali per rendere il sapore dolce dei frutti rossi ancora più vivo e fresco! ', 6, 'img/img_FIRST_LAB_N.3.jpg', 100),
+(19, 'SHINOBI KILLER', 'l killer è arrivato, un liquido fatale, le sue armi? Un dolcissimo melone accompagnato da note di frutti di bosco.', 6, 'img/img_SHINOBI_KILLER.jpg', 70),
+(20, 'STRA PANNA', 'Panna & Fragole', 6, 'img/img_STRA_PANNA.jpg', 50),
+(21, 'GRAPE O’CLOCK', 'Un dolce mix di uva americana e rinfrescante limonata, tutto ghiacciato.', 6, 'img/img_GRAPE_O’CLOCK.jpg', 100);
 
 --
--- Dumping routines for database 'e-commerce'
+-- Indici per le tabelle scaricate
 --
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- Indici per le tabelle `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id_account`);
+
+--
+-- Indici per le tabelle `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id_product`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `products`
+--
+ALTER TABLE `products`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2021-05-10 17:22:06
