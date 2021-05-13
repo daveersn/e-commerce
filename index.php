@@ -41,7 +41,7 @@ include 'common/db_conn.php';
                                     <?php endif; endfor;?> -->
                                     
                                     <!-- QTA PRODOTTO -->
-                                    <span class="text-xs">Qta: </span><span class="font-semibold text-yellow-600"><?php echo $row["prod_qta"]?>ml</span>
+                                    <span class="text-xs">Qta: </span><span class="font-semibold text-yellow-600 text-xs"><?php echo $row["prod_qta"]?>ml</span>
 
                                 </div>
                             </div>

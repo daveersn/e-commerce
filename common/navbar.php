@@ -1,7 +1,7 @@
 <nav class="navbar z-50 p-4">
 
     <?php 
-    include "cart.php";
+    include "cart/cart.php";
     include "search.php";
     ?>
 
@@ -32,7 +32,7 @@
             </a>
         </li>
         <li>
-            <a href="login.php" class="block flex flex-col items-center">
+            <a href="login_front.php" class="block flex flex-col items-center">
                 <i class="fas fa-user pt-2"></i>
                 <span>Profilo</span>
             </a>

@@ -18,7 +18,7 @@
         		</div>
         	</div>
 	    </div>
-	        <div class="mt-6 text-right"><a href="" class="font-bold border primary-btn rounded-md shadow-xl p-1 px-2">CHECKOUT</a></div>
+	        <div class="mt-6 text-right"><a href="" class="font-bold border primary-btn rounded-md shadow-xl p-1 px-3 text-black">CHECKOUT</a></div>
     </div>  
 
 </cart>
