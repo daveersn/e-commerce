@@ -5,21 +5,35 @@ session_start();
 ?>
 
 <body class="bg-gray-100">
-    <div>
-        <div style="background: rgba(0,0,0,1);">
-            <div class="navbar-top flex justify-between items-center p-3 text-xl font-bold text-white uppercase tracking-wider secondary-btn shadow-xl">
-                <h1>
-                    <?php echo $_SESSION['displayName'] ?>
-                </h1>
-                <button class="text-lg rounded-md px-3 py-1 bg-red-500 hover:bg-red-600 shadow-md" style="border: 1px solid rgba(255,255,255, 0.3);">Logout</button>
+    <div class="pt-5">
+
+        <a href="#">
+            <div class="mt-6 flex flex-col items-center">
+                <div class="border flex flex-col justify-center shadow-md rounded-md bg-white w-36 h-36 text-center">
+                    <i class="far fas fa-archive text-7xl primary"></i>
+                    <h2 class="pt-1 uppercase text-xl text-gray-700 font-extrabold tracking-wider">Ordini</h2>
+                </div>
             </div>
-        </div>
-        <div class="mt-6 flex flex-col items-center">
-            <div class="p-6 border shadow-md rounded-md bg-white w-36 h-36 text-center">
-                <i class="ml-2 far fa-address-book text-7xl primary"></i>
-                <h2 class="p-2 uppercase text-xl text-gray-800 font-bold tracking-wider">Ordini</h2>
+        </a>
+
+        <a href="#">
+            <div class="mt-6 flex flex-col items-center">
+                <div class="border flex flex-col justify-center shadow-md rounded-md bg-white w-36 h-36 text-center">
+                    <i class="far fa-address-book text-7xl text-purple-400"></i>
+                    <h2 class="pt-1 uppercase text-xl text-gray-700 font-extrabold tracking-wider">Account</h2>
+                </div>
             </div>
-        </div>
+        </a>
+
+        <a href="logout.php">
+            <div class="mt-6 flex flex-col items-center">
+                <div class="border flex flex-col justify-center shadow-md rounded-md bg-white w-36 h-36 text-center">
+                    <i class="fas fa-sign-out-alt text-7xl text-red-400"></i>
+                    <h2 class="pt-1 uppercase text-xl text-gray-700 font-extrabold tracking-wide">Logout</h2>
+                </div>
+            </div>
+        </a>
+
     </div>
     <?php include 'common/navbar.php' ?>
 </body>

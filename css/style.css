@@ -58,6 +58,12 @@ html {
     background-color: #5c6bc0;
     color: black;
 }
+
+.userArea {
+    background: rgb(42,49,87);
+    background: linear-gradient(180deg, rgba(42,49,87,1) 0%, rgba(92,107,192,1) 45%, rgba(243,244,246,1) 100%);
+}
+
 /*NAVBAR TOGGLES*/
 .max-height-menu-0 {
     max-height: 0;

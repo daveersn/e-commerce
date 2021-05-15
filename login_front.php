@@ -2,7 +2,6 @@
 include 'common/header.php';
 include 'common/db_conn.php';
 session_start();
-var_dump($_SESSION);
 if(isset($_SESSION['isLogged'])){
   if($_SESSION['isLogged']) {
     header('location: userArea.php');

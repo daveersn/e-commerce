@@ -1,11 +1,26 @@
 <?php
 include 'common/header.php';
 include 'common/db_conn.php';
+session_start();
+if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = [];
+}
+
 ?>
+
 
 <body>
     <div class="min-h-full">
         <div class="p-3 pb-20 h-full bg-gray-100">
+        <?php
+            if(isset($_GET["cart_added"])):
+        ?>
+            <div id="cartAddedMsg" class="text-center text-xs text-gray-100 text-md uppercase font-bold bg-red-500 rounded-2xl shadow-md py-2 mx-8">
+                <span><?= $_GET["cart_added"] ?> aggiunto al carrello</span>
+                <i onclick="this.parentElement.style.display='none';" class="fas fa-times pl-1"></i>
+            </div>
+        <?php endif; ?>
+
             <?php
             $var = ["test1", "test2", "test3", "test4", "test5", "test6",];
             $sql_get_products = $conn->query("SELECT * FROM products ORDER BY prod_name");
