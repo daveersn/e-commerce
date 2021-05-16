@@ -8,7 +8,8 @@ function create_img_from_url($img_url, $img_name){
 if (isset($_GET["prod_name"]) &&
 	isset($_GET["prod_desc"]) &&
 	isset($_GET["prod_price"]) &&
-	isset($_GET["prod_img"])) {
+	isset($_GET["prod_img"]) &&
+	isset($_GET["prod_category"])) {
 
 
 	for ($i=0; $i < count($_GET["prod_name"]); $i++) { 
@@ -17,12 +18,13 @@ if (isset($_GET["prod_name"]) &&
 		    $_GET["prod_desc"][$i] != "" &&
 			$_GET["prod_price"][$i] != 0 &&
 			$_GET["prod_img"][$i] != "" &&
+			$_GET["prod_category"][$i] != "" &&
 			$_GET["prod_qta"][$i] != 0){
 
 			$img = create_img_from_url($_GET["prod_img"][$i], $_GET["prod_name"][$i]);
 
 			$sql_insert_prod = $conn->query("
-				INSERT INTO products (prod_name, prod_desc, prod_price, prod_img, prod_qta) VALUES ('".$_GET['prod_name'][$i]."', '".str_replace("'","\'",$_GET['prod_desc'][$i])."', '".$_GET['prod_price'][$i]."', '$img', '".$_GET['prod_qta'][$i]."')");
+				INSERT INTO products (prod_name, prod_desc, prod_price, prod_img, prod_qta, prod_category) VALUES ('".$_GET['prod_name'][$i]."', '".str_replace("'","\'",$_GET['prod_desc'][$i])."', '".$_GET['prod_price'][$i]."', '$img', '".$_GET['prod_qta'][$i]."', '".$_GET['prod_category'][$i]."')");
 
 			if(!$sql_insert_prod) {
 				echo "Query non riuscita";
