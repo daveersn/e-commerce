@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'common/db_conn.php';
 session_start();
 
@@ -17,12 +17,13 @@ else {
 	if ($sqlLogin->num_rows > 0) {
 		$row = $sqlLogin -> fetch_array(MYSQLI_ASSOC);
 		$_SESSION['isLogged'] = true;
+		$_SESSION['userId'] = $row['id_account'];
 		$_SESSION['displayName'] = $row['display_name'];
 		header('Location: userArea.php');
 	}
 	else {
 		header('location: login_front.php?error');
 	}
-}	
+}
 
 ?>

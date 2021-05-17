@@ -2,12 +2,11 @@
 include 'common/header.php';
 include 'common/db_conn.php';
 session_start();
-if(!isset($_SESSION["cart"])){
+if (!isset($_SESSION["cart"])) {
     $_SESSION["cart"] = [];
 }
 
 ?>
-
 
 <body>
     <div class="min-h-full">
@@ -18,23 +17,23 @@ if(!isset($_SESSION["cart"])){
 
                 <select name="category" class="border rounded-2xl shadow-md px-2 text-center font-semibold uppercase py-2 bg-yellow-600 text-white" onchange="submit();">
 
-                    <option value="all" 
-                    <?php if(isset($_GET["category"])) { 
+                    <option value="all"
+                    <?php if (isset($_GET["category"])) {
                         echo(($_GET["category"] == "all") ? "selected" : "");} ?>
                     >Tutti</option>
 
-                    <option value="fruttati" 
-                    <?php if(isset($_GET["category"])) { 
+                    <option value="fruttati"
+                    <?php if (isset($_GET["category"])) {
                         echo(($_GET["category"] == "fruttati") ? "selected" : "");} ?>
                     >Fruttati</option>
 
-                    <option value="cremosi" 
-                    <?php if(isset($_GET["category"])) { 
+                    <option value="cremosi"
+                    <?php if (isset($_GET["category"])) {
                         echo(($_GET["category"] == "cremosi") ? "selected" : "");} ?>
                     >Cremosi</option>
 
-                    <option value="tabacchi" 
-                    <?php if(isset($_GET["category"])) { 
+                    <option value="tabacchi"
+                    <?php if (isset($_GET["category"])) {
                         echo(($_GET["category"] == "tabacchi") ? "selected" : "");} ?>
                     >Tabacchi</option>
                 </select>
@@ -71,8 +70,8 @@ if(!isset($_SESSION["cart"])){
                                     <!-- TITOLO PRODOTTO -->
                                     <span class="tracking-wide font-bold uppercase">
                                         <?php echo $row['prod_name']; ?></span>
-                                    <div class="mb-auto font-semibold">    
-                                        
+                                    <div class="mb-auto font-semibold">
+
                                         <!-- QTA PRODOTTO -->
                                         <span class="text-xs">Qta: </span><span class="font-semibold text-yellow-600 text-xs"><?php echo $row["prod_qta"]?>ml</span>
 
@@ -80,7 +79,7 @@ if(!isset($_SESSION["cart"])){
                                 </div>
 
                                 <!-- DESC PRODOTTO -->
-                                <span class="overflow-hidden clamp-2 text-sm ml-3"> 
+                                <span class="overflow-hidden clamp-2 text-sm ml-3">
                                     <?php echo $row['prod_desc']; ?> </span>
                             </div>
 
@@ -93,11 +92,11 @@ if(!isset($_SESSION["cart"])){
                     </div>
 
             <?php endwhile; }
-            else { 
-                ?> 
+            else {
+                ?>
                     <div class="text-center font-bold text-gray-800 text-lg uppercase my-10">NESSUN PRODOTTO IN QUESTA CATEGORIA</div>
                 <?php
-            } 
+            }
         }?>
         </div>
         <!-- NAVBAR -->
@@ -106,7 +105,7 @@ if(!isset($_SESSION["cart"])){
 </body>
 
 <script type="text/javascript">
-    
+
 </script>
 
 </html>

@@ -82,7 +82,7 @@ html {
 
 .max-height-menu-full div {
     opacity: 1;
-    transition: 0.9s ease;
+    transition: 1s ease;
 }
 
 /*PRODUCT CARDS*/

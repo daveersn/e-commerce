@@ -63,6 +63,5 @@ include 'common/db_conn.php';
 function readURL(input, id_index) {
     var preview_img = document.getElementById("preview_img_".concat(id_index));
     preview_img.src = input.value;
-    
 }
 </script>
