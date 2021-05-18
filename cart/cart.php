@@ -87,12 +87,10 @@
         switch (element.value) {
             case "10":
                 checkoutPrice.value = "4";
-                console.log(checkoutPrice.value);
                 price.innerText = "4€";
                 break;
             case "30":
                 checkoutPrice.value = "7";
-                console.log(checkoutPrice.value);
                 price.innerText = "7€";
                 break;
             case "60":

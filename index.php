@@ -13,9 +13,9 @@ if (!isset($_SESSION["cart"])) {
         <div class="p-3 pb-20 min-h-screen bg-gray-100">
 
             <form action="#" method="GET" class="text-right">
-                <span class="border-2 py-2 px-2 pr-6 rounded-2xl bg-yellow-500 shadow-2xl font-semibold text-white" style="margin-right: -25px;">Categoria</span>
+                <span class="border-2 py-2 px-2 pr-6 rounded-2xl bg-purple-400 shadow-2xl font-semibold text-white text-xs" style="margin-right: -25px;">Categoria</span>
 
-                <select name="category" class="border rounded-2xl shadow-md px-2 text-center font-semibold uppercase py-2 bg-yellow-600 text-white" onchange="submit();">
+                <select name="category" class="border rounded-2xl shadow-md px-2 text-center font-semibold uppercase py-2 bg-purple-500 text-white" onchange="submit();">
 
                     <option value="all"
                     <?php if (isset($_GET["category"])) {

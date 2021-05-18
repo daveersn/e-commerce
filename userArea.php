@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'common/db_conn.php';
 include 'common/header.php';
 session_start();
@@ -7,7 +7,7 @@ session_start();
 <body class="bg-gray-100">
     <div class="pt-5">
 
-        <a href="#">
+        <a href="order_list.php">
             <div class="mt-6 flex flex-col items-center">
                 <div class="border flex flex-col justify-center shadow-md rounded-md bg-white w-36 h-36 text-center">
                     <i class="far fas fa-archive text-7xl primary"></i>

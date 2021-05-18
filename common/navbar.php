@@ -1,11 +1,11 @@
 <nav class="navbar z-50 p-4">
 
-    <?php 
+    <?php
     include "cart/cart.php";
     include "search.php";
     ?>
 
-    
+
     <ul class="navbar-list flex justify-around text-gray-400">
         <li>
             <a href="index.php" class="block flex flex-col items-center active">
@@ -51,6 +51,5 @@
             el.classList.remove('max-height-menu-full');
             el.classList.add('max-height-menu-0');
         }
-        console.log('sectionId: ', sectionId);
     }
 </script>
