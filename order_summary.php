@@ -75,7 +75,7 @@ include "common/header.php";
                 </div>
             <?php endif; } endforeach; }?>
             <hr class="border">
-            <div class="flex justify-between mt-3">
+            <div class="flex justify-between mt-3 mb-8">
                 <div>
                     <p class="font-semibold tracking-wide pl-3">TOTALE:
                         <span class="text-xl text-red-500 font-bold" id="totViewOrdine"><?=$orderTot?></span>

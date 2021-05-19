@@ -39,20 +39,20 @@ session_start();
                         <div class="my-2">
                             <div class="flex justify-between">
                                 <div class="flex">
-                                    <img src="<?= $rowProd['prod_img']; ?>" width="70" height="70" class="border shadow-md rounded-xl z-10">
+                                    <img src="<?= $rowProd['prod_img']; ?>" class="border border-primary shadow-md rounded-xl z-10" style="width: 70px; height: 70px;">
                                     <div class="ml-2">
                                         <div>
                                             <p class="font-bold uppercase tracking-wide"><?= $rowProd['prod_name'];  ?></p>
                                         </div>
                                         <div>
-                                            <p class="text-xs pt-4">Boccetta: <span class="text-sm text-red-400 font-semibold"><?= ($rowProd['order_prod_bocc']) ? 'SI' : 'NO'; ?></span></p>
+                                            <p class="text-xs pt-4">Boccetta: <span class="text-sm text-red-400 font-semibold"><?= ($rowProd['order_prod_bocc']) ? 'SI <span class="text-xs font-bold text-black">+1€</span>' : 'NO'; ?></span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-sm">
-                                    <p>Prezzo</p>
-                                    <p class="font-semibold text-gray-800"><?= $rowProd['order_prod_qta'] ?><span class="text-xs">ml</span></p>
-                                    <p class="font-semibold text-gray-800"><?= $rowProd['order_prod_nic'] ?><span class="text-xs">nic</span></p>
+                                <div class="flex flex-col justify-between text-sm">
+                                    <p class="text-gray-800 font-semibold"><?= $rowProd['order_prod_price'] ?><span class="text-xs">€</span></p>
+                                    <p class="text-gray-800"><?= $rowProd['order_prod_qta'] ?><span class="text-xs">ml</span></p>
+                                    <p class="text-gray-800"><?= $rowProd['order_prod_nic'] ?><span class="text-xs">nic</span></p>
                                 </div>
                             </div>
                         </div>

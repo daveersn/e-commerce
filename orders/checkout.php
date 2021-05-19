@@ -23,11 +23,11 @@ if (isset($_GET["checkout_prodid"]) && isset($_GET["mlselect"]) && isset($_GET["
                 }
             }
             echo $key;
-            $sqlInsertOrderProducts = $conn->query("INSERT INTO order_products (cod_product, cod_order, order_prod_qta, order_prod_nic, order_prod_bocc) VALUES ('$id_prod', '".$lastOrderId['id_order']."', '".$_GET['mlselect'][$key]."', '".$_GET['nicselect'][$key]."', '$boccetta')");
+            $sqlInsertOrderProducts = $conn->query("INSERT INTO order_products (cod_product, cod_order, order_prod_qta, order_prod_nic, order_prod_bocc, order_prod_price) VALUES ('$id_prod', '".$lastOrderId['id_order']."', '".$_GET['mlselect'][$key]."', '".$_GET['nicselect'][$key]."', '$boccetta', '".$_GET['checkout_price'][$key]."')");
             echo ($sqlInsertOrderProducts) ? "Prodotto ordine inserito" : "Errore query inserimento prodotti";
         }
 
-        echo "Ordine inserito";
+        header("location: ../index.php?order_success=true");
     }
 }
 ?>

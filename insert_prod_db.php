@@ -1,6 +1,7 @@
 <?php
 
 function create_img_from_url($img_url, $img_name){
+	$img_name = str_replace('’', '_', $img_name);
 	copy($img_url, 'img/img_'.str_replace(' ', '_', $img_name).'.jpg');
 	return 'img/img_'.str_replace(' ', '_', $img_name).'.jpg';
 }
@@ -12,7 +13,7 @@ if (isset($_GET["prod_name"]) &&
 	isset($_GET["prod_category"])) {
 
 
-	for ($i=0; $i < count($_GET["prod_name"]); $i++) { 
+	for ($i=0; $i < count($_GET["prod_name"]); $i++) {
 
 		if ($_GET["prod_name"][$i] != "" &&
 		    $_GET["prod_desc"][$i] != "" &&
@@ -36,7 +37,7 @@ if (isset($_GET["prod_name"]) &&
 		}
 		else {
 			$j = $i;
-			$j++; 
+			$j++;
 			echo "Prodotto n. $j non inserito: campi vuoti <br>";
 		}
 	}

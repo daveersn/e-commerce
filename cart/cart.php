@@ -28,7 +28,7 @@
                 <input type="text" name="checkout_prodid[]" value="<?php echo $row["id_product"] ?>" hidden>
 
                  <!-- CART IMG -->
-                 <img src="<?php echo $row['prod_img'];?>" class="border shadow-xl rounded-md" style="width: 60px; height: 60px; object-fit: cover;">
+                 <img src="<?php echo $row['prod_img'];?>" class="border border-primary shadow-md rounded-md" style="width: 60px; height: 60px; object-fit: cover;">
                  <div class="flex flex-1 flex-col">
                      <div class="flex justify-between items-center ml-2">
 

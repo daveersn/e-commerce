@@ -40,10 +40,18 @@ if (!isset($_SESSION["cart"])) {
             </form>
 
         <?php
+            //POPUP MSGS
             if(isset($_GET["cart_added"])):
         ?>
             <div id="cartAddedMsg" class="my-3 text-center text-xs text-gray-100 text-md uppercase font-bold bg-red-500 rounded-2xl shadow-md py-2 mx-8">
                 <span><?= $_GET["cart_added"] ?> aggiunto al carrello</span>
+                <i onclick="this.parentElement.style.display='none';" class="fas fa-times pl-1"></i>
+            </div>
+        <?php endif;
+            if(isset($_GET["order_success"])):
+        ?>
+            <div id="orderSuccessMsg" class="my-3 text-center text-xs text-gray-100 text-md uppercase font-bold bg-green-500 rounded-2xl shadow-md py-2 mx-20">
+                <span>Ordine effettuato!</span>
                 <i onclick="this.parentElement.style.display='none';" class="fas fa-times pl-1"></i>
             </div>
         <?php endif; ?>
