@@ -3,12 +3,13 @@
     <?php
     include "cart/cart.php";
     include "search.php";
+    $newsUpdate = true;
     ?>
 
 
     <ul class="navbar-list flex justify-around text-gray-400">
         <li>
-            <a href="index.php" class="block flex flex-col items-center active">
+            <a href="index.php" class="block flex flex-col items-center <?php echo($navActive == 'home') ? 'active' : '';?> ">
                 <i class="fas fa-home pt-2"></i>
                 <span>Home</span>
             </a>
@@ -26,13 +27,18 @@
             </a>
         </li>
         <li>
-            <a href="#" class="block flex flex-col items-center">
-                <i class="fab fa-buffer pt-2"></i>
-                <span>Categorie</span>
+            <a href="news.php" class="block flex flex-col items-center <?php echo($navActive == 'news') ? 'active' : '';?>">
+                <i class="fab fa-buffer pt-2 relative">
+                    <?php
+                    if($newsUpdate):?>
+                        <i class="fas fa-dot-circle text-xs absolute block text-red-300 rounded-full" style="top:0; left: 80%;"></i>
+                    <?php endif; ?>
+                </i>
+                <span>News</span>
             </a>
         </li>
         <li>
-            <a href="login_front.php" class="block flex flex-col items-center">
+            <a href="login_front.php" class="block flex flex-col items-center <?php echo($navActive == 'profile') ? 'active' : '';?>">
                 <i class="fas fa-user pt-2"></i>
                 <span>Profilo</span>
             </a>

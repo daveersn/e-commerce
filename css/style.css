@@ -121,6 +121,23 @@ html {
     color: white;
 }
 
+/* PROD MODAL */
+
+.prod-modal {
+    position: fixed; /* Stay in place */
+    z-index: 998; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.3);
+}
+.modal-content {
+    max-width: 90vw;
+    z-index: 999;
+}
+
 /* NAVBAR TOP */
 .navbar-top {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -138,4 +155,25 @@ html {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* NEWS */
+.news-card {
+    width: 90vw;
+}
+
+.news-modal {
+    position: fixed; /* Stay in place */
+    z-index: 998; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.3);
+}
+.modal-content {
+    max-width: 90vw;
+    max-height: 70vh;
+    z-index: 999;
 }

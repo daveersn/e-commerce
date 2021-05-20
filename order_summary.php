@@ -2,7 +2,7 @@
 session_start();
 include "common/db_conn.php";
 include "common/header.php";
-
+$navActive = 'home';
 ?>
 
 <body>

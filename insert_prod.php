@@ -1,6 +1,7 @@
-<?php 
+<?php
 include 'common/header.php';
 include 'common/db_conn.php';
+$navActive = '';
 ?>
 
 <body class="min-h-full">
@@ -12,7 +13,7 @@ include 'common/db_conn.php';
             </form>
             <form action="#" method="GET">
                 <?php
-                include "insert_prod_db.php";       
+                include "insert_prod_db.php";
 
                 if (isset($_GET["form_amount"])):
                     $form_amount = $_GET["form_amount"];
@@ -50,7 +51,7 @@ include 'common/db_conn.php';
             </form>
             <!--             <div class="pb-20">
                 <?php var_dump($_GET[""]); ?>
-                
+
             </div> -->
         </div>
         <!-- NAVBAR -->

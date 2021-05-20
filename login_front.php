@@ -1,6 +1,7 @@
 <?php
 include 'common/header.php';
 include 'common/db_conn.php';
+$navActive = 'profile';
 session_start();
 if(isset($_SESSION['isLogged'])){
   if($_SESSION['isLogged']) {
@@ -12,9 +13,9 @@ if(isset($_SESSION['isLogged'])){
 <body class="ih-1 bg-gray-100">
 
 <div class="min-h-85 flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8 bg-gray-100">
-  <div class="max-w-xs w-full space-y-8 px-3 py-10 border rounded-2xl shadow-md bg-white">
+  <div class="max-w-xs w-full space-y-8 px-3 py-10 border rounded-2xl shadow-md bg-white pt-5">
     <div class="text-center">
-      <i class="far fa-user-circle text-6xl"></i>
+      <i class="far fa-user-circle text-7xl"></i>
       <h2 class="mt-3 text-center text-3xl font-bold text-gray-900">
         Effettua il<br>login
       </h2>

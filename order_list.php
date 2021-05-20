@@ -1,6 +1,7 @@
 <?php
 include 'common/db_conn.php';
 include 'common/header.php';
+$navActive = 'profile';
 session_start();
 ?>
 

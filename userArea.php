@@ -1,6 +1,7 @@
 <?php
 include 'common/db_conn.php';
 include 'common/header.php';
+$navActive = 'profile';
 session_start();
 ?>
 
@@ -16,7 +17,7 @@ session_start();
             </div>
         </a>
 
-        <a href="#">
+        <a href="account.php">
             <div class="mt-6 flex flex-col items-center">
                 <div class="border flex flex-col justify-center shadow-md rounded-md bg-white w-36 h-36 text-center">
                     <i class="far fa-address-book text-7xl text-purple-400"></i>
